@@ -11,6 +11,7 @@ function bootscore_child_enqueue_styles() {
   $modified_bootscoreChildCss = date('YmdHi', filemtime(get_stylesheet_directory() . '/css/main.css'));
   wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.css', array('parent-style'), $modified_bootscoreChildCss);
 
-  // custom.js
-  wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/js/custom.js', false, '', true);
+  // main.js
+  wp_enqueue_script('mainmin-js', get_stylesheet_directory_uri() . '/js/build/main.min.js', false, '', true);
+
 }
