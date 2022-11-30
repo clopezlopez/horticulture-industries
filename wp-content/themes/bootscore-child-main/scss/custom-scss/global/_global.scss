@@ -102,13 +102,13 @@ input[type='number']::-webkit-outer-spin-button {
     margin: 0;
 }
 
-.section {
-    padding: 60px 0;
+// .section {
+//     padding: 60px 0;
 
-    &--nopb {
-        padding: 60px 0 0;
-    }
-}
+//     &--nopb {
+//         padding: 60px 0 0;
+//     }
+// }
 
 .accent {
     color: $accent;
@@ -126,7 +126,7 @@ input[type='number']::-webkit-outer-spin-button {
     line-height: 20px;
 }
 
-.btn {
+.btn, .nav-item-98 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -142,16 +142,18 @@ input[type='number']::-webkit-outer-spin-button {
 
     &:hover, &:focus {
         transform: scale(1.1);
+        background-color: $accent;
+        color: $primary;
+
     }
 
     &--green {
-        background: transparent;
+        // background: transparent;
         color: $secondary;
         border: 1px solid $secondary;
 
         &:hover, &:focus {
             background: $secondary;
-            color: #fff;
             transform: none;
         }
     }
@@ -333,13 +335,13 @@ input[type='number']::-webkit-outer-spin-button {
 
 @media screen and (min-width: 991.98px) {
 
-    .section {
-        padding: 160px 0;
+    // .section {
+    //     padding: 160px 0;
 
-        &--nopb {
-            padding: 160px 0 0;
-        }
-    }
+    //     &--nopb {
+    //         padding: 160px 0 0;
+    //     }
+    // }
     .swiper-pagination {
         &--dots {
             margin-top: 60px;
