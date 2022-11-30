@@ -1,313 +1,150 @@
-/**
- * Herbalist
- * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
- * Exclusively on https://1.envato.market/herbalist-html
- *
- * @encoding        UTF-8
- * @version         1.0.4
- * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
- * @license         Envato License https://1.envato.market/KYbje
- * @contributors    Lamber Lilit (winter.rituel@gmail.com)
- * @support         help@merkulov.design
- **/
-// header component
+header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0.0);
 
-.header {
-    height: 60px;
-    background-color: #fff;
-    z-index: 10000;
-    will-change: transform;
-    transition: position .5s ease-in-out, transform .5s ease-in-out, background-color .3s ease-in-out;
-
-    &.sticky {
-        position: fixed;
-        background-color: #fff;
-        width: 100%;
-        top: 0;
-        left: 0;
-        box-shadow: 0 0 15px rgba(37, 143, 103, 0.1);
-    }
-
-    &.opened {
-        box-shadow: none;
-    }
-
-    &--pinned {
-        transform: translateY(0%);
-    }
-
-    &--unpinned {
-        transform: translateY(-100%);
-    }
-
-    &_logo {
-        order: 2;
-
-        span:not(.logo) {
-            display: none;
-        }
-    }
-
-    &_nav {
-        width: 100%;
-        order: 4;
-        height: 0;
-        overflow: hidden;
-        transition: height .5s ease, padding-top .5s ease;
-        font-family: $accentFont;
-        font-weight: 700;
-        font-size: 20px;
-        color: $primary;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: #fff;
-
-        &.active {
-            height: 100vh;
-            padding-top: 30px;
-            overflow-y: scroll;
-            box-shadow: 0 30px 15px rgba(37, 143, 103, 0.07);
-        }
-
-        .nav-item {
-            transition: color .3s ease-in-out;
-            font-size: 17px;
-            line-height: 1.3;
-
-            &:hover, &.active {
-                color: $secondary;
-            }
-        }
-
-        .dropdown {
-            &-toggle {
-                margin-bottom: 20px;
-
-                .icon {
-                    font-size: 14px;
-                    margin-left: 5px;
-                }
-            }
-
-            &-menu {
-                padding-bottom: 15px;
-            }
-
-            .nav-item {
-                margin-bottom: 20px;
-
-                &:last-of-type {
-                    margin-bottom: 0;
-                }
-            }
-
-        }
-    }
-
-    &_user {
-        order: 3;
-        flex-grow: 1;
-
-        &-action {
-            border-radius: 50%;
-            background: $accent;
-            color: $primary;
-            width: 40px;
-            height: 40px;
-            font-size: 16px;
-
-            &:first-of-type {
-                margin-right: 15px;
-            }
-        }
-
-        &-search {
-            &_field {
-                display: none;
-            }
-        }
-    }
-
-    &_trigger {
-        order: 1;
-        width: 30px;
-        height: 28px;
-        margin-right: 15px;
-
-        .line {
-            border-radius: 2px;
-            background: $primary;
-            height: 4px;
-            width: 100%;
-            transition: width .3s ease-in-out;
-
-            &--short {
-                width: 75%;
-            }
-        }
-
-        &.active {
-            .line {
-                &--short {
-                    width: 100%;
-                }
-            }
-        }
-    }
 }
 
-// media queries
+.scrolling-active {
+	background-color: rgba(0, 0, 0, .1);
 
-@media screen and (min-width: 767.98px) {
-    .header {
-        &_logo {
-            span:not(.logo) {
-                display: inline;
-            }
+	header {
+		box-shadow: 0 4px 1.05rem rgba(0, 0, 0, .14);
+		background-color: $light;
 
-            .accent {
-                color: $primary;
-            }
+	}
+}
 
-            .logo {
-                margin-right: 10px;
-            }
-        }
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 3vw;
+	padding-left: 3vw;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.0);
+	transition: background-color .5s ease;
+	color: $primary;
 
-        &_nav {
 
-            &.active {
-                height: 50vh;
-            }
+	&-image {
+		width: 50px;
+		height: 50px;
+	}
 
-        }
+	&-text {
+		margin-left: -18px;
+		margin-bottom: -10px;
+		font-size: 1.75rem;
+		font-weight: bold;
+		color: $primary;
 
-        &_user {
+		&:hover {
+			color: $secondary;
+		}
+	}
 
-            &-search {
-                position: relative;
-                margin-right: 15px;
+	
+}
 
-                &_field {
-                    display: inline;
-                    padding: 0 20px;
-                    height: 40px;
-                    border: 1px solid $gray;
-                    border-radius: 20px;
-                    background: #fff;
+.nav-menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 
-                    &::placeholder {
-                        color: $primary;
-                        transition: opacity .3s ease-in-out;
-                        font-size: 14px;
-                    }
+	.nav-item {
+		margin-left: 2.5rem;
+	}
+	
+	.nav-link {
+		font-size: 1.2rem;
+		font-weight: 500;
+		color: $primary;
+	
+		&:hover {
+			color: $secondary;
+		}
+	}
 
-                    &:focus {
-                        &::placeholder {
-                            opacity: 0;
-                        }
-                    }
-                }
+	.nav-link.active {
+		font-weight: 600;
+		color: $secondary;
 
-                &_btn {
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                    margin: 0 !important;
-                }
-            }
-        }
-    }
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+.hamburger {
+	display: none;
 }
 
 
-@media screen and (min-width: 1199.98px) {
-    .header {
-        height: 140px;
-        transition: transform .5s ease-in-out, height .3s ease-in, background-color .2s ease;
 
-        &.sticky {
-            height: 90px;
-        }
 
-        &_user {
 
-            &-search {
-                margin-right: 150px;
-            }
+@media only screen and (max-width: 900px) {
 
-            &-action {
-                &:first-of-type {
-                    margin-right: 30px;
-                }
-            }
-        }
+	.bar {
+		display: block;
+		width: 25px;
+		height: 3px;
+		margin: 5px auto;
+		-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		background-color: $dark;
+	}
 
-        &_nav {
-            position: static;
-            background: transparent;
-            padding: 0 !important;
-            height: unset;
-            order: 2;
-            margin-left: 60px;
-            font-size: 17px;
+	.nav-menu {
+		display: flex;
+		position: fixed;
+		left: -100%;
+		top: 0;
+		flex-direction: column;
+		background-color: #f9f9f9;
+		width: 75%;
+		height: 100%;
+		text-align: center;
+		justify-content: center;
+		transition: 0.3s;
+		box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+	}
 
-            &-list {
-                display: flex;
 
-                &_item {
-                    margin-right: 40px;
+	.nav-menu.active {
+		left: 0%;
+	}
 
-                    &:last-of-type {
-                        margin-right: 0;
-                    }
+	.nav-item {
+		margin: 0.5rem 0;
+	}
 
-                    .nav-link {
-                        margin-bottom: 0;
-                    }
-                }
-            }
+	.nav-link {
+		color: #3f3030;
+	}
 
-            .dropdown-menu {
-                position: absolute;
-                opacity: 0;
-                max-height: unset;
-                text-align: left;
-                visibility: hidden;
-                padding-top: 15px;
-                transition: opacity .3s ease;
 
-                .dropdown-list {
-                    background: #fff;
-                    box-shadow: 0 0 15px rgba(37, 143, 103, 0.07);
-                    border-radius: 8px;
-                    padding: 30px;
+	.hamburger {
+		display: block;
+		cursor: pointer;
+	}
 
-                    .nav-item {
-                        margin-bottom: 30px;
-                        transition: color .3s ease;
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
 
-                        &:last-of-type {
-                            margin-bottom: 0;
-                        }
+	.hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+		background-color: $primary;
+	}
 
-                        &:hover, &.active {
-
-                            &:before {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-
-                &.active {
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
-        }
-    }
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+		background-color: $primary;
+	}
 }

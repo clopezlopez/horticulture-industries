@@ -1,23 +1,25 @@
-/**
- * Herbalist
- * Herbalist – is a website template created for selling the cannabis, medical marijuana and CBD products, cannabis blogging and others
- * Exclusively on https://1.envato.market/herbalist-html
- *
- * @encoding        UTF-8
- * @version         1.0.4
- * @copyright       (C) 2018 - 2022 Merkulove ( https://merkulov.design/ ). All rights reserved.
- * @license         Envato License https://1.envato.market/KYbje
- * @contributors    Lamber Lilit (winter.rituel@gmail.com)
- * @support         help@merkulov.design
- **/
-// display section
+.hero {
+    img {
+        margin: 0 auto;
+    }
+
+    &-social-icon {
+        color: $primary;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+
+}
 
 .display {
     text-align: center;
     position: relative;
     overflow: hidden;
-    background: $pastelYellow;
+    background: $primary;
     // padding-top: 120px;
+    color: $light;
 
     &-pagination {
         margin-top: 30px;
@@ -26,7 +28,7 @@
             font-family: $accentFont;
             font-weight: 600;
             font-size: 16px;
-            color: rgba(#fff, 0.4);
+            color: rgba($dark, 0.4);
             margin-right: 20px;
             display: inline-block;
             transition: transform .3s ease;
@@ -39,18 +41,20 @@
             &-active {
                 font-weight: 700;
                 transform: scale(1.5);
-                color: #fff;
+                color: $dark;
             }
         }
     }
 
     &_about {
-        margin-bottom: 80px;
+        // margin-bottom: 80px;
     }
 
     &_header {
         margin-bottom: 60px;
-
+        &-title {
+            color: $light;
+        }
         &-text {
             margin: 15px 0 30px;
         }
@@ -59,6 +63,7 @@
 
     &_contacts {
         &-text {
+            // color: blue;
             margin: 0 auto 15px;
             font-size: 14px;
             font-weight: 600;
@@ -88,7 +93,7 @@
             .link {
                 font-family: $accentFont;
                 font-weight: 700;
-                color: $primary;
+                color: $light;
             }
         }
     }
@@ -103,7 +108,7 @@
             width: 10000px;
             height: 10000px;
             margin: 0 -1000px;
-            background: $primary;
+            background: $pastelYellow;
             left: 0;
 
         }
@@ -114,7 +119,7 @@
         width: 100%;
         height: 100%;
         margin-top: 60px;
-        color: #fff;
+        color: $dark;
 
         &-slide {
             height: auto;
@@ -133,11 +138,12 @@
 
             &_main {
                 .title {
-                    color: inherit;
+                    color: $primary;
                 }
 
                 .text {
-                    margin: 15px 0;
+                    color: $dark;
+                    margin: 15px auto;
                 }
 
                 .btn--underline {
@@ -178,12 +184,11 @@
 
 @media screen and (min-width: 575.98px) {
     .display {
-        text-align: left;
 
         &-pagination {
             position: absolute;
             right: 0;
-            top: 60%;
+            top: 76%;
             margin-top: 0;
             margin-right: 10px;
             z-index: 100;
@@ -218,16 +223,9 @@
 
             &-slide {
 
-                &_media {
-
-                    img {
-                        margin: 0;
-                    }
-                }
-
                 &_main {
                     .text {
-                        max-width: 300px;
+                        max-width: 350px;
                     }
                 }
 
@@ -237,6 +235,14 @@
 }
 
 @media screen and (min-width: 767.98px) {
+
+    .hero {
+  
+        img {
+            margin: 0 0 0 auto;
+        }
+    }
+
     .display {
         // padding-top: 150px;
 
@@ -329,11 +335,11 @@
 
 @media screen and (min-width: 1199.98px) {
     .display {
-        // padding-top: 310px;
+        text-align: left;
 
-        &_about {
-            margin-bottom: 140px;
-        }
+        // &_about {
+        //     // margin-bottom: 140px;
+        // }
 
         &_header {
             &-title {
@@ -381,11 +387,11 @@
 
                 &_media {
                     position: absolute;
-                    left: -124px;
+                    left: -91px;
                     margin-right: 0;
-                    width: 300px;
+                    width: 245px;
                     height: 100%;
-                    top: -30%;
+                    top: -8%;
 
                     img {
                         width: 100%;
@@ -418,14 +424,14 @@
             &-slide {
 
                 &_media {
-                    left: -206px;
+                    left: -123px;
                     max-width: 400px;
-                    height: 720px;
-                    top: -53%;
+                    height: 455px;
+                    top: -7%;
                     width: 100%;
 
                     img {
-                        max-height: 720px;
+                        max-height: 455px;
                         width: auto;
                     }
                 }

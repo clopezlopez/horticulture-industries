@@ -1,2 +1,14 @@
-// In this file you can override the default variables of Bootstrap
-// Do you want primary to be green? Just add "$primary: #00FF00;" to this file and the theme will automatically compile the scss for you.
+// template colors
+
+$primary: #214842;
+$secondary: #258F67;
+$accent: #EFC368;
+$text: #556260;
+$gray: #C6C6C6;
+$primaryHighlight: #9EBCA6;
+$pastelYellow: #FAFAF5;
+
+// template fonts
+
+$bodyFont: 'Montserrat', sans-serif;
+$accentFont: 'NunitoSans', sans-serif;
